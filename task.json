@@ -1,0 +1,7 @@
+{
+    "global": {
+
+        "task_name": "What does the cow say?",
+        "task_slug": "cowsay"
+    }
+}

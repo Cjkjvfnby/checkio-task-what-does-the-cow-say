@@ -1,0 +1,62 @@
+<p>
+    <i>Lets cow say!</i>
+    Our cow is young and can only say. There is cow that can be Tux <a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>
+</p>
+
+<p>
+    <strong>Hint: </strong> Read py docs about formatting styles(str.format and %)
+    <a href="http://docs.python.org/2/library/string.html">Python2</a>
+    <a href="http://docs.python.org/3/library/stdtypes.html#string-methods">Python3</a>
+</p>
+
+<p>
+    <strong>Input: </strong> str  (alphanum, punctuation, spaces)
+</p>
+
+<p>
+    <strong>Output: </strong> str
+</p>
+
+<p>
+    <ul>
+        <li>
+            Output always starts and ends with empty line(\n)
+        </li>
+        <li>
+            If line less then 40 characters it will fit in one string. String quoted in  &lt;...&gt;
+        </li>
+        <li>
+            <p>If line greater then 40 chars it will be splitted by next rule:</p>
+            If there is space inside line, split by space.<br/>
+            Otherwise split by 40th symbol.<br/>
+
+            <p>First line is quoted in /...\</p>
+            <p>Siddle lines |...|</p>
+            <p>Laste line in \.../</p>
+        </li>
+    </ul>
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+checkio('Checkio rulezz') == '''
+ _______________________________________
+< Checkio rulezz                        >
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    <i>for fun</i>
+</p>

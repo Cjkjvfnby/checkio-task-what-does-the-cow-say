@@ -1,0 +1,50 @@
+def checkio(text):
+    return 'Cow say "%s"' % text
+
+#These "asserts" using only for self-checking and not necessary for auto-testing
+if __name__ == '__main__':
+    expected_cowsay_one_line = r'''
+ _______________________________________
+< Checkio rulezz                        >
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+    expected_cowsay_two_lines = r'''
+ _________________________________________
+/ aaaaaaaaaaaaaaaaaaaaaaaafjdhfgjhdfkhdgf \
+\ khdgkfdgkfdfjgdljfg                     /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+    
+    expected_cowsay_many_lines = r'''
+ _______________________________________
+/ kdhfjdkfldhf dfjsdfhdskjfh            \
+| dfbjdsfkdsjhf dsfbjdskflsdjfhlsdf d   |
+| sfjsdfhkdsjhfdsjkf dskjfsdlfhsdlf sdf |
+\ lsd flhsd fhlsdf hldsf                /
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+    
+    cowsay_one_line =  checkio('checkio rulezz')
+    assert cowsay_one_line == expected_cowsay_one_line
+    
+    cowsay_two_lines =  checkio('aaaaaaaaaaaaaaaaaaaaaaaafjdhfgjhdfkhdgfkhdgkfdgkfdfjgdljfg')
+    assert cowsay_two_lines == expected_cowsay_two_lines
+    
+    cowsay_many_lines = checkio('kdhfjdkfldhf dfjsdfhdskjfh dfbjdsfkdsjhf dsfbjdskflsdjfhlsdf d sfjsdfhkdsjhfdsjkf  '
+                                'dsk jfsdlfhsdlf sdf lsd flhsd fhlsdf hldsf')
+    assert cowsay_many_lines == expected_cowsay_many_lines

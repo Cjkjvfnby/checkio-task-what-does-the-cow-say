@@ -1,0 +1,4 @@
+cowsay
+======
+
+Task for checkio
