@@ -34,6 +34,13 @@ from checkio.referees import checkers
 
 from tests import TESTS
 
+
+def forbidden(code, runner):
+    if '+' in code:
+        return False, "I found '+' in your code."
+    return True, "ok"
+
+
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
@@ -42,8 +49,5 @@ api.add_listener(
             'python-27': cover_codes.unwrap_args,  # or None
             'python-3': cover_codes.unwrap_args
         },
-        # checker=None,  # checkers.float.comparison(2)
-        # add_allowed_modules=[],
-        # add_close_builtins=[],
-        # remove_allowed_modules=[]
+        inspector=forbidden
     ).on_ready)
