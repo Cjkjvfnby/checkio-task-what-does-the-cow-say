@@ -1,7 +1,7 @@
 expected_cowsay_one_line = r'''
- _______________________________________
-< Checkio rulezz                        >
- ---------------------------------------
+ ________________
+< Checkio rulezz >
+ ----------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -9,10 +9,10 @@ expected_cowsay_one_line = r'''
                 ||     ||
 '''
 expected_cowsay_two_lines = r'''
- _________________________________________
-/ aaaaaaaaaaaaaaaaaaaaaaaafjdhfgjhdfkhdgf \
-\ khdgkfdgkfdfjgdljfg                     /
- -----------------------------------------
+ ________________________________________
+/ A                                      \
+\ longtextwithonlyonespacetofittwolines. /
+ ----------------------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -21,12 +21,12 @@ expected_cowsay_two_lines = r'''
 '''
 
 expected_cowsay_many_lines = r'''
- _______________________________________
-/ kdhfjdkfldhf dfjsdfhdskjfh            \
-| dfbjdsfkdsjhf dsfbjdskflsdjfhlsdf d   |
-| sfjsdfhkdsjhfdsjkf dskjfsdlfhsdlf sdf |
-\ lsd flhsd fhlsdf hldsf                /
- ---------------------------------------
+ _________________________________________
+/ Lorem ipsum dolor sit amet, consectetur \
+| adipisicing elit, sed do eiusmod tempor |
+| incididunt ut labore et dolore magna    |
+\ aliqua.                                 /
+ -----------------------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -34,11 +34,10 @@ expected_cowsay_many_lines = r'''
                 ||     ||
 '''
 
-
-cowsay_one_line =  'checkio rulezz'
-cowsay_two_lines =  'aaaaaaaaaaaaaaaaaaaaaaaafjdhfgjhdfkhdgfkhdgkfdgkfdfjgdljfg'
-cowsay_many_lines = ('kdhfjdkfldhf dfjsdfhdskjfh dfbjdsfkdsjhf dsfbjdskflsdjfhlsdf d sfjsdfhkdsjhfdsjkf  '
-                     'dsk jfsdlfhsdlf sdf lsd flhsd fhlsdf hldsf')
+cowsay_one_line =  'Checkio rulezz'
+cowsay_two_lines =  'A longtextwithonlyonespacetofittwolines.'
+cowsay_many_lines = ('Lorem ipsum dolor sit amet, consectetur adipisicing elit, '
+                     'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
 TESTS = {
     "Basics": [
