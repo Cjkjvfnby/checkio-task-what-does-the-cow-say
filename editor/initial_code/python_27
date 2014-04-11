@@ -45,5 +45,6 @@ if __name__ == '__main__':
     cowsay_two_lines =  checkio('A longtextwithonlyonespacetofittwolines.')
     assert cowsay_two_lines == expected_cowsay_two_lines, 'Wrong answer:\n%s' % cowsay_two_lines
     
-    cowsay_many_lines = checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+    cowsay_many_lines = checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do '
+                                'eiusmod tempor incididunt ut labore et dolore magna aliqua.')
     assert cowsay_many_lines == expected_cowsay_many_lines, 'Wrong answer:\n%s' % cowsay_many_lines
