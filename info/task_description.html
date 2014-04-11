@@ -5,16 +5,15 @@
 
         <p>
 <pre>
- _________________________________________
-/ Dog goes woof                           \
-| Cat goes meow                           |
-| Bird goes tweet                         |
-| and mouse goes squeek                   |
-|                                         |
-| Cow goes moo                            |
-| Def go foo                              |
-\ And solution will go to you             /
- -----------------------------------------
+ _____________________________
+/ Dog goes woof               \
+| Cat goes meow               |
+| Bird goes tweet             |
+| and mouse goes squeek       |
+| Cow goes moo                |
+| Def go foo                  |
+\ And solution will go to you /
+ -----------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -25,7 +24,7 @@
 </p>
 
 <p>
-    <strong>Input: </strong> str (alphanum, punctuation, spaces)
+    <strong>Input: </strong> str (with non zero length)
 </p>
 <p>
     <strong>Output: </strong> str
@@ -33,19 +32,23 @@
 <p>
     <ul>
         <li>
-            Output always starts and ends with empty line (\n)
+            Output always starts and ends with empty line.
+            Multiple spaces in a raw replaced by one space.
+            Each line consists from next chars(count):  quote border(1), space(1), line(1-39), space(1), quote border(1)
         </li>
         <li>
             If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong>
         </li>
         <li>
-            <p>If line greater then 40 chars it will be splitted by next rules:</p>
-            If there is space inside line, split by space.<br/>
-            Otherwise split by 40th symbol.<br/>
-            <br/>
-           First line is quoted in <strong>/\</strong><br/>
-           Middle lines <strong>||</strong><br/>
-           Last line in <strong>\/</strong><br/>
+            <p>If line greater or equal 40 chars it will be splitted by next rules:</p>
+            Max line size is 39 chars. If any spaces in line split by most right otherwise take first 39 chars.<br/>
+            Line cant has space in start or end (single spaces between line and border!)<br/>
+
+           Top consists from underscore chars. (starts from single space and end before border column)<br/>
+           First line is quoted in <strong>/\</strong><br/><br/>
+           Middle lines <strong>||</strong><br/><br/>
+           Last line in <strong>\/</strong><br/><br/>
+           Bottom consist form minus. Has same length as top.<br/>
         </li>
     </ul>
 </p>
@@ -64,9 +67,34 @@
     </p>
     <pre class="brush: python">
 checkio('Checkio rulezz') == '''
- _______________________________________
-< Checkio rulezz                        >
- ---------------------------------------
+ ________________
+< Checkio rulezz >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+checkio('A longtextwithonlyonespacetofittwolines.') == '''
+ ________________________________________
+/ A                                      \
+\ longtextwithonlyonespacetofittwolines. /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.') == '''
+ _________________________________________
+/ Lorem ipsum dolor sit amet, consectetur \
+| adipisicing elit, sed do eiusmod tempor |
+| incididunt ut labore et dolore magna    |
+\ aliqua.                                 /
+ -----------------------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
