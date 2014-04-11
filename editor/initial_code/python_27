@@ -4,9 +4,9 @@ def checkio(text):
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     expected_cowsay_one_line = r'''
- _______________________________________
-< Checkio rulezz                        >
- ---------------------------------------
+ ________________
+< Checkio rulezz >
+ ----------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -14,10 +14,10 @@ if __name__ == '__main__':
                 ||     ||
 '''
     expected_cowsay_two_lines = r'''
- _________________________________________
-/ aaaaaaaaaaaaaaaaaaaaaaaafjdhfgjhdfkhdgf \
-\ khdgkfdgkfdfjgdljfg                     /
- -----------------------------------------
+ ________________________________________
+/ A                                      \
+\ longtextwithonlyonespacetofittwolines. /
+ ----------------------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -26,12 +26,12 @@ if __name__ == '__main__':
 '''
     
     expected_cowsay_many_lines = r'''
- _______________________________________
-/ kdhfjdkfldhf dfjsdfhdskjfh            \
-| dfbjdsfkdsjhf dsfbjdskflsdjfhlsdf d   |
-| sfjsdfhkdsjhfdsjkf dskjfsdlfhsdlf sdf |
-\ lsd flhsd fhlsdf hldsf                /
- ---------------------------------------
+ _________________________________________
+/ Lorem ipsum dolor sit amet, consectetur \
+| adipisicing elit, sed do eiusmod tempor |
+| incididunt ut labore et dolore magna    |
+\ aliqua.                                 /
+ -----------------------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
@@ -39,12 +39,11 @@ if __name__ == '__main__':
                 ||     ||
 '''
     
-    cowsay_one_line =  checkio('checkio rulezz')
-    assert cowsay_one_line == expected_cowsay_one_line
+    cowsay_one_line =  checkio('Checkio rulezz')
+    assert cowsay_one_line == expected_cowsay_one_line, 'Wrong answer:\n%s' % cowsay_one_line
     
-    cowsay_two_lines =  checkio('aaaaaaaaaaaaaaaaaaaaaaaafjdhfgjhdfkhdgfkhdgkfdgkfdfjgdljfg')
-    assert cowsay_two_lines == expected_cowsay_two_lines
+    cowsay_two_lines =  checkio('A longtextwithonlyonespacetofittwolines.')
+    assert cowsay_two_lines == expected_cowsay_two_lines, 'Wrong answer:\n%s' % cowsay_two_lines
     
-    cowsay_many_lines = checkio('kdhfjdkfldhf dfjsdfhdskjfh dfbjdsfkdsjhf dsfbjdskflsdjfhlsdf d sfjsdfhkdsjhfdsjkf  '
-                                'dsk jfsdlfhsdlf sdf lsd flhsd fhlsdf hldsf')
-    assert cowsay_many_lines == expected_cowsay_many_lines
+    cowsay_many_lines = checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+    assert cowsay_many_lines == expected_cowsay_many_lines, 'Wrong answer:\n%s' % cowsay_many_lines
