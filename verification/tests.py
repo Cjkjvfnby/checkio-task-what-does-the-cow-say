@@ -55,19 +55,19 @@ cowsay_with_multiple_spaces = 'With  multiple  spaces                           
 TESTS = {
     "Basics": [
         {
-            "input": cowsay_one_line,
+            "input": [cowsay_one_line],
             "answer": expected_cowsay_one_line,
         },
         {
-            "input": cowsay_two_lines,
+            "input": [cowsay_two_lines],
             "answer": cowsay_two_lines,
         },
         {
-            "input": cowsay_many_lines,
+            "input": [cowsay_many_lines],
             "answer": cowsay_many_lines,
         },
         {
-            "input": cowsay_with_multiple_spaces,
+            "input": [cowsay_with_multiple_spaces],
             "answer": expected_cowsay_with_multiple_spaces
         }
     ]
