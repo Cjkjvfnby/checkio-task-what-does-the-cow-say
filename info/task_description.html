@@ -3,53 +3,49 @@
     Our cow is young and can only say. There is a cow that can be Tux (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>)
 </p>
 
-        <p>
-<pre>
- _____________________________
-/ Dog goes woof               \
-| Cat goes meow               |
-| Bird goes tweet             |
-| and mouse goes squeek       |
-| Cow goes moo                |
-| Def go foo                  |
-\ And solution will go to you /
- -----------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-</pre>
-<strong>What does the cow say?</strong>
+<p>
+    <pre>
+     _____________________________
+    / Dog goes woof               \
+    | Cat goes meow               |
+    | Bird goes tweet             |
+    | and mouse goes squeek       |
+    | Cow goes moo                |
+    | Def go foo                  |
+    \ And solution will go to you /
+     -----------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    </pre>
+    <strong>What does the cow say?</strong>
 </p>
 
 <p>
     <strong>Input: </strong> str (with non zero length)
 </p>
-<p>
-    <strong>Output: </strong> str
-</p>
+
+<p><strong>Output: </strong> str</p>
 <p>
     <ul>
-        <li>
-            Output always starts and ends with empty line.
-            Multiple spaces in a raw replaced by one space.
-            Each line consists from next chars(count):  quote border(1), space(1), line(1-39), space(1), quote border(1)
+        <li>Cow is always  the same, only quote changes.</li>
+        <li>Multiple spaces in a row replaced by one space.</li>
+        <li>Top consists from underscore chars. (starts from single space and end before border column)</li>
+        <li>Each line of quote consists from next parst:  quote border(1), space(1), line(1-39), space(1), quote border(1)</li>
+        <li>If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong></li>
+        <li>If line greater or equal 40 chars it will be splitted by next rules:
+            <ul>
+                <li>Max line size is 39 chars. If any spaces in line split by most right otherwise take first 39 chars.</li>
+                <li>Line cannot starts or end with space</li>
+                <li>After split align all line to same length by adding spaces to the end.<li>
+                <li>First line borders: <strong>/\</strong></li>
+                <li>Middle line borders: <strong>||</strong></li>
+                <li>Last line borders: <strong>\/</strong></li>
+            </ul>
         </li>
-        <li>
-            If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong>
-        </li>
-        <li>
-            <p>If line greater or equal 40 chars it will be splitted by next rules:</p>
-            Max line size is 39 chars. If any spaces in line split by most right otherwise take first 39 chars.<br/>
-            Line cant has space in start or end (single spaces between line and border!)<br/>
-
-           Top consists from underscore chars. (starts from single space and end before border column)<br/>
-           First line is quoted in <strong>/\</strong><br/><br/>
-           Middle lines <strong>||</strong><br/><br/>
-           Last line in <strong>\/</strong><br/><br/>
-           Bottom consist form minus. Has same length as top.<br/>
-        </li>
+        <li>Bottom consist form minus. Has same length as top.</li>
     </ul>
 </p>
 <p>
