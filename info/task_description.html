@@ -52,6 +52,7 @@
     <strong>Hint:</strong> Read python docs (<a href="http://docs.python.org/2/library/string.html">2.7</a>,
     <a href="http://docs.python.org/3/library/stdtypes.html#string-methods">3.3</a>)
     about formatting styles (str.format and %).
+    Notice for <strong>r</strong> before string. It is raw strings they use different rules for interpreting backslash escape sequences.
 </p>
 
 <div class="for_info_only">
@@ -59,7 +60,7 @@
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio('Checkio rulezz') == '''
+checkio('Checkio rulezz') == r'''
  ________________
 < Checkio rulezz >
  ----------------
@@ -69,7 +70,7 @@ checkio('Checkio rulezz') == '''
                 ||----w |
                 ||     ||
 '''
-checkio('A longtextwithonlyonespacetofittwolines.') == '''
+checkio('A longtextwithonlyonespacetofittwolines.') == r'''
  ________________________________________
 / A                                      \
 \ longtextwithonlyonespacetofittwolines. /
@@ -81,7 +82,7 @@ checkio('A longtextwithonlyonespacetofittwolines.') == '''
                 ||     ||
 '''
 
-checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.') == '''
+checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.') == r'''
  _________________________________________
 / Lorem ipsum dolor sit amet, consectetur \
 | adipisicing elit, sed do eiusmod tempor |
