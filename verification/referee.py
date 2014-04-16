@@ -31,15 +31,7 @@ from checkio import api
 from checkio.referees.io import CheckiOReferee
 from checkio.referees import cover_codes
 from checkio.referees import checkers
-
 from tests import TESTS
-
-
-def forbidden(code, runner):
-    if '+' in code:
-        return False, "I found '+' in your code."
-    return True, "ok"
-
 
 api.add_listener(
     ON_CONNECT,
@@ -49,5 +41,4 @@ api.add_listener(
             'python-27': cover_codes.unwrap_args,  # or None
             'python-3': cover_codes.unwrap_args
         },
-        inspector=forbidden
     ).on_ready)
