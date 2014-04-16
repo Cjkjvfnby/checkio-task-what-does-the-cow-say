@@ -34,7 +34,7 @@ expected_cowsay_many_lines = r'''
                 ||     ||
 '''
 
-expected_cowsay_with_multiple_spaces = '''
+expected_cowsay_with_multiple_spaces = r'''
  ______________________
 < With multiple spaces >
  ----------------------
@@ -60,11 +60,11 @@ TESTS = {
         },
         {
             "input": [cowsay_two_lines],
-            "answer": cowsay_two_lines,
+            "answer": expected_cowsay_two_lines,
         },
         {
             "input": [cowsay_many_lines],
-            "answer": cowsay_many_lines,
+            "answer": expected_cowsay_many_lines,
         },
         {
             "input": [cowsay_with_multiple_spaces],
