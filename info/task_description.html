@@ -37,8 +37,7 @@
         <li>If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong></li>
         <li>If line greater or equal 40 chars it will be splited by next rules:
             <ul>
-                <li>Max line size is 39 chars. If any spaces in line split by most right otherwise take first 39 chars.</li>
-                <li>Line cannot start or end with space</li>
+                <li>Max line size is 39 chars. If any spaces in line split by most right space(this space is removed from text) otherwise take first 39 chars. </li>
                 <li>After split align all line to same length by adding spaces to the end.<li>
                 <li>First line borders: <strong>/\</strong></li>
                 <li>Middle line borders: <strong>||</strong></li>
