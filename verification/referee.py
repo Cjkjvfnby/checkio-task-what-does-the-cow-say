@@ -37,9 +37,9 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        cover_code={
-            'python-27': cover_codes.unwrap_args,  # or None
-            'python-3': cover_codes.unwrap_args
-        },
+        # cover_code={
+        #     'python-27': cover_codes.unwrap_args,  # or None
+        #     'python-3': cover_codes.unwrap_args
+        # },
         function_name="cow_say"
     ).on_ready)
