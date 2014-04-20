@@ -1,9 +1,64 @@
+<style>
+    ul.rules li {
+        margin-left: 20px;
+    }
+</style>
 <p>
     <i><strong>Lets cow say!</strong></i><br/>
-    Our cow is young and can only say. There is a cow that can be Tux (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>)
+</p>
+<p>
+    Our cow is young and can only say.
+    There is a cow that can be Tux (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>).
+    You are given some text and your function should format it in the "cow" text.
 </p>
 
-<p>
+<div>
+    Let's examine the rules for that:
+    <ul class="rules">
+        <li>
+            Cow is always the same, only quote changes.
+        </li>
+        <li>
+            Multiple spaces in a row replaced by one space.
+        </li>
+        <li>
+            Top consists from underscore chars. It starts from single space and end before border column.
+        </li>
+        <li>
+            Each line of quote consists from next parts: quote border(1), space(1), line(1-39), space(1), quote
+            border(1).
+        </li>
+        <li>
+            If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong>
+        </li>
+        <li>
+            If line greater or equal 40 chars it should be split by next rules:
+            <ul>
+                <li>
+                    Max line size is 39 chars. If any spaces in line split by most right space(this space is removed
+                    from
+                    text) otherwise take first 39 chars.
+                </li>
+                <li>
+                    After split align all line to same length by adding spaces to the end.
+                <li>
+                <li>
+                    First line borders: <strong>/\</strong>
+                </li>
+                <li>
+                    Middle line borders: <strong>||</strong>
+                </li>
+                <li>
+                    Last line borders: <strong>\/</strong></li>
+            </ul>
+        </li>
+        <li>
+            Bottom consist form minus. Has same length as top.
+        </li>
+    </ul>
+</div>
+
+<div>
     <pre>
      _____________________________
     / Dog goes woof               \
@@ -21,37 +76,22 @@
                     ||     ||
     </pre>
     <strong>What does the cow say?</strong>
+</div>
+
+<p>
+    <strong>Input: </strong> Text as a string.
 </p>
 
 <p>
-    <strong>Input: </strong> str (with non zero length)
+    <strong>Output: </strong> The result for console as a string.
 </p>
 
-<p><strong>Output: </strong> str</p>
-<p>
-    <ul>
-        <li>Cow is always  the same, only quote changes.</li>
-        <li>Multiple spaces in a row replaced by one space.</li>
-        <li>Top consists from underscore chars. (starts from single space and end before border column)</li>
-        <li>Each line of quote consists from next parts:  quote border(1), space(1), line(1-39), space(1), quote border(1)</li>
-        <li>If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong></li>
-        <li>If line greater or equal 40 chars it will be splited by next rules:
-            <ul>
-                <li>Max line size is 39 chars. If any spaces in line split by most right space(this space is removed from text) otherwise take first 39 chars. </li>
-                <li>After split align all line to same length by adding spaces to the end.<li>
-                <li>First line borders: <strong>/\</strong></li>
-                <li>Middle line borders: <strong>||</strong></li>
-                <li>Last line borders: <strong>\/</strong></li>
-            </ul>
-        </li>
-        <li>Bottom consist form minus. Has same length as top.</li>
-    </ul>
-</p>
 <p>
     <strong>Hint:</strong> Read python docs (<a href="http://docs.python.org/2/library/string.html">2.7</a>,
     <a href="http://docs.python.org/3/library/stdtypes.html#string-methods">3.3</a>)
     about formatting styles (str.format and %).
-    Notice for <strong>r</strong> before string. It is raw strings they use different rules for interpreting backslash escape sequences.
+    Notice for <strong>r</strong> before string. It is raw strings they use different rules for interpreting backslash
+    escape sequences.
 </p>
 
 <div class="for_info_only">
@@ -100,5 +140,10 @@ checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>Just for fun.</i>
+    The original Cowsay are written in the Perl programming language,
+    and as such is easily adaptable to system tasks in Unix, such as telling users their home directories are full,
+    they have new mail, etc.
+    Now you will write your own realisation for the old unix program.
+    This concept can learn you how to prepare and format text for the console output.
+
 </p>
