@@ -7,40 +7,40 @@
     <i>Lets cow say!</i><br/>
 </p>
 <p>
-    Our cow is young and can only say.
-    There is a cow that can be Tux (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>).
-    You are given some text and your function should format it in the "cow" text.
+    Our cow is young and can only say some of the words we teach it.
+    Not only does it talk, but this cow can turn into the famous Tux
+    (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>) if we ask it nicely.
+
 </p>
 
 <div>
-    Let's examine the rules for that:
+    You are given some text and your function should format it in the "cows" speech.
+    Let's examine the rules for this problem:
     <ul class="rules">
         <li>
-            Cow is always the same, only quote changes.
+            The cow is always the same, only quote changes.
         </li>
         <li>
-            Multiple spaces in a row replaced by one space.
+            Multiple spaces in a row are replaced by one space.
         </li>
         <li>
-            Top consists from underscore chars. It starts from single space and end before border column.
+            The top border consists of underscore characters. It starts from a single space and ends before the border column.
         </li>
         <li>
-            Each line of quote consists from next parts: quote border(1), space(1), line(1-39), space(1), quote
-            border(1).
+            Each line of the quote consists of these parts: quote border(1), space(1), line(1-39), space(1), quote border(1).
         </li>
         <li>
-            If line less then 40 characters it will fit in one string. String quoted in <strong>&lt;&gt;</strong>
+            If line is less than 40 characters, it will fit into one string. The string is quoted in <strong>&lt;&gt;</strong>.
         </li>
         <li>
-            If line greater or equal 40 chars it should be split by next rules:
+            If the line is greater than or equal to 40 characters, it should be split by these rules:
             <ul>
                 <li>
-                    Max line size is 39 chars. If any spaces in line split by most right space(this space is removed
-                    from
-                    text) otherwise take first 39 chars.
+                    Max line size is 39 chars. If any spaces are in the line,
+                    split it by the rightmost space (this space is removed from text) otherwise take the first 39 characters.
                 </li>
                 <li>
-                    After split align all line to same length by adding spaces to the end.
+                    After the split align all lines to same length by adding spaces at the end of each line.
                 <li>
                 <li>
                     First line borders: <strong>/\</strong>
@@ -53,22 +53,22 @@
             </ul>
         </li>
         <li>
-            Bottom consist form minus. Has same length as top.
+            The bottom border consists of the minus sign. Has same length as top.
         </li>
     </ul>
 </div>
 
 <div>
     <pre>
-     _____________________________
-    / Dog goes woof               \
-    | Cat goes meow               |
-    | Bird goes tweet             |
-    | and mouse goes squeek       |
-    | Cow goes moo                |
-    | Def go foo                  |
-    \ And solution will go to you /
-     -----------------------------
+     _________________________________
+    / Dog goes woof                   \
+    | Cat goes meow                   |
+    | Bird goes tweet                 |
+    | and mouse goes squeek           |
+    | Cow goes moo                    |
+    | Duck goes quack                 |
+    \ And the solution will go to you /
+     ---------------------------------
             \   ^__^
              \  (oo)\_______
                 (__)\       )\/\
@@ -83,14 +83,14 @@
 </p>
 
 <p>
-    <strong>Output: </strong> The result for console as a string.
+    <strong>Output: </strong> The result for the console as a string.
 </p>
 
 <p>
     <strong>Hint:</strong> Read python docs (<a href="http://docs.python.org/2/library/string.html">2.7</a>,
     <a href="http://docs.python.org/3/library/stdtypes.html#string-methods">3.3</a>)
     about formatting styles (str.format and %).
-    Notice for <strong>r</strong> before string. It is raw strings they use different rules for interpreting backslash
+    Notice for <strong>r</strong> before the string. It is a raw string and they use different rules for interpreting backslash
     escape sequences.
 </p>
 
@@ -140,10 +140,10 @@ cow_say('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    The original Cowsay are written in the Perl programming language,
-    and as such is easily adaptable to system tasks in Unix, such as telling users their home directories are full,
-    they have new mail, etc.
-    Now you will write your own realisation for the old unix program.
-    This concept can learn you how to prepare and format text for the console output.
+    The original Cowsays are written in the Perl programming language,
+    and as such are easily adaptable to system tasks in Unix.
+    They can perform functions such as telling users their home directories are full,
+    that they have new mail, etc. Now you will write your own realisation for this classic unix program.
+    This concept can teach you how to prepare and format text for the console output.
 
 </p>
