@@ -1,8 +1,16 @@
-def checkio(text):
+COW = r'''
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+def cow_say(text):
     return 'Cow say "%s"' % text
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
+    #These "asserts" using only for self-checking and not necessary for auto-testing
     expected_cowsay_one_line = r'''
  ________________
 < Checkio rulezz >
@@ -24,7 +32,7 @@ if __name__ == '__main__':
                 ||----w |
                 ||     ||
 '''
-    
+
     expected_cowsay_many_lines = r'''
  _________________________________________
 / Lorem ipsum dolor sit amet, consectetur \
@@ -38,13 +46,13 @@ if __name__ == '__main__':
                 ||----w |
                 ||     ||
 '''
-    
-    cowsay_one_line =  checkio('Checkio rulezz')
+
+    cowsay_one_line = cow_say('Checkio rulezz')
     assert cowsay_one_line == expected_cowsay_one_line, 'Wrong answer:\n%s' % cowsay_one_line
-    
-    cowsay_two_lines =  checkio('A longtextwithonlyonespacetofittwolines.')
+
+    cowsay_two_lines = cow_say('A longtextwithonlyonespacetofittwolines.')
     assert cowsay_two_lines == expected_cowsay_two_lines, 'Wrong answer:\n%s' % cowsay_two_lines
-    
-    cowsay_many_lines = checkio('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do '
+
+    cowsay_many_lines = cow_say('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do '
                                 'eiusmod tempor incididunt ut labore et dolore magna aliqua.')
     assert cowsay_many_lines == expected_cowsay_many_lines, 'Wrong answer:\n%s' % cowsay_many_lines
