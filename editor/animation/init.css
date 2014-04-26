@@ -36,7 +36,6 @@
     color: #696969;
     font-family: Verdana, Arial, sans-serif;
     font-size: 15px;
-    /*width: 100%;*/
 }
 
 .animation-content .call{
@@ -48,7 +47,6 @@
     text-align: center;
     letter-spacing: 0.7px;
     word-break: break-word;
-    /*white-space: pre-wrap;*/
 }
 
 
@@ -56,7 +54,6 @@
 .animation-content .output div,
 .animation-content .result{
     font-weight: bold;
-    /*border: 2px dotted #a9a9a9;*/
     margin: 10px;
     color: black;
     text-align: center;
@@ -184,7 +181,3 @@ fieldset[disabled] .btn {
     cursor: not-allowed;
     background-color: #eeeeee;
 }
-
-/* Your CSS */
-/*          */
-
