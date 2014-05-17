@@ -71,14 +71,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             if (!result) {
-                $content.find('.call').html('Fail: cow_say(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Fail: cowsay(' + JSON.stringify(checkioInput) + ')');
                 $content.find('.answer pre').text(rightResult);
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
             }
             else {
-                $content.find('.call').html('Pass: cow_say(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Pass: cowsay(' + JSON.stringify(checkioInput) + ')');
                 $content.find('.answer').remove();
             }
             //Dont change the code before it

@@ -6,7 +6,7 @@ COW = r'''
                 ||     ||
 '''
 
-def cow_say(text):
+def cowsay(text):
     return 'Cow say "%s"' % text
 
 if __name__ == '__main__':
@@ -47,12 +47,12 @@ if __name__ == '__main__':
                 ||     ||
 '''
 
-    cowsay_one_line = cow_say('Checkio rulezz')
+    cowsay_one_line = cowsay('Checkio rulezz')
     assert cowsay_one_line == expected_cowsay_one_line, 'Wrong answer:\n%s' % cowsay_one_line
 
-    cowsay_two_lines = cow_say('A longtextwithonlyonespacetofittwolines.')
+    cowsay_two_lines = cowsay('A longtextwithonlyonespacetofittwolines.')
     assert cowsay_two_lines == expected_cowsay_two_lines, 'Wrong answer:\n%s' % cowsay_two_lines
 
-    cowsay_many_lines = cow_say('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do '
+    cowsay_many_lines = cowsay('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do '
                                 'eiusmod tempor incididunt ut labore et dolore magna aliqua.')
     assert cowsay_many_lines == expected_cowsay_many_lines, 'Wrong answer:\n%s' % cowsay_many_lines
