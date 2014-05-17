@@ -10,10 +10,10 @@ expected_cowsay_one_line = r'''
 '''
 
 expected_cowsay_two_lines_simple = r'''
- _________________________
-/ onehundredtwentytwo and \
-\ onehundredfiftyone      /
- -------------------------
+ _____________________________
+/ onehundredtwentytwo and one \
+\ hundredfiftyone             /
+ -----------------------------
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
