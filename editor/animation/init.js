@@ -71,7 +71,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             if (!result) {
-                $content.find('.call').html('Fail: cowsay(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Fail: cowsay(' + JSON.stringify(checkioInput) + ')' + '<pre> _____________________\n< I did not say that! >\n ---------------------\n        \\   ^__^\n         \\  (xx)\\_______\n</pre>');
                 $content.find('.answer pre').text(rightResult);
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
