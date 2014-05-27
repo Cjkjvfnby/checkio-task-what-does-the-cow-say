@@ -1,3 +1,15 @@
+base_in_spaces_inside = 'spaces                           inside'
+base_out_spaces_inside = r'''
+ _______________
+< spaces inside >
+ ---------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
 edge_in_onechar = 'I'
 edge_out_one_char = r'''
  ___
@@ -125,6 +137,8 @@ base_out_with_spaces_two_line = r'''
                 ||----w |
                 ||     ||
 '''
+
+base_in_with_multi_spaces_two_line = 'onehundredtwentytwo     and    one    hundredfiftyone'
 
 extra_in_two_lines_with_small_start = 'A longtextwithonlyonespacetofittwolines.'
 extra_out_two_lines_with_small_start = r'''
@@ -283,6 +297,10 @@ extra_out_wrap_34 = r'''
 TESTS = {
     "Basics": [
         {
+            "input": base_in_spaces_inside,
+            "answer": base_out_spaces_inside,
+        },
+        {
             "input": base_in_one_line,
             "answer": base_out_one_line,
         },
@@ -306,7 +324,10 @@ TESTS = {
             "input": base_in_with_spaces_two_line,
             "answer": base_out_with_spaces_two_line,
         },
-
+        {
+            "input": base_in_with_multi_spaces_two_line,
+            "answer": base_out_with_spaces_two_line,
+        },
         {
             "input": base_in_many_lines,
             "answer": base_out_many_lines,
