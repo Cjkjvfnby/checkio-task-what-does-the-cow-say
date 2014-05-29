@@ -294,6 +294,20 @@ extra_out_wrap_34 = r'''
                 ||     ||
 '''
 
+extra_in_empty_first_string =  ' 0123456789012345678901234567890123456789 '
+extra_out_empty_first_string = r'''
+ _________________________________________
+/                                         \
+| 012345678901234567890123456789012345678 |
+\ 9                                       /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
 TESTS = {
     "Basics": [
         {
@@ -392,5 +406,9 @@ TESTS = {
             "input": extra_in_wrap_34,
             "answer": extra_out_wrap_34
         },
+        {
+            "input": extra_in_empty_first_string,
+            "output": extra_out_empty_first_string
+        }
     ]
 }
