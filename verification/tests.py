@@ -110,8 +110,8 @@ edge_out_space_after = r'''
                 ||     ||
 '''
 
-edge_in_spaces_around =' c '
-edge_in_many_spaces_around ='    c     '
+edge_in_spaces_around = ' c '
+edge_in_many_spaces_around = '    c     '
 edge_out_spaces_around = r'''
  _____
 <  c  >
@@ -292,7 +292,7 @@ extra_out_wrap_34 = r'''
                 ||     ||
 '''
 
-extra_in_empty_first_string =  ' 0123456789012345678901234567890123456789 '
+extra_in_empty_first_string = ' 0123456789012345678901234567890123456789 '
 extra_out_empty_first_string = r'''
  _________________________________________
 /                                         \
@@ -355,14 +355,14 @@ TESTS = {
             "answer": edge_out_space_after
         },
         {
-           "input": edge_in_spaces_around,
-           "answer": edge_out_spaces_around
+            "input": edge_in_spaces_around,
+            "answer": edge_out_spaces_around
         },
         {
-           "input": edge_in_many_spaces_around,
-           "answer": edge_out_spaces_around
+            "input": edge_in_many_spaces_around,
+            "answer": edge_out_spaces_around
         },
-         {
+        {
             "input": edge_in_onechar,
             "answer": edge_out_one_char,
         },
