@@ -100,30 +100,6 @@ edge_out_space_before = r'''
                 ||     ||
 '''
 
-edge_in_space_after = 'b '
-edge_out_space_after = r'''
- ____
-< b  >
- ----
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-'''
-
-edge_in_spaces_around =' c '
-edge_in_many_spaces_around ='    c     '
-edge_out_spaces_around = r'''
- _____
-<  c  >
- -----
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-'''
 
 base_in_with_spaces_two_line = 'onehundredtwentytwo and one hundredfiftyone'
 base_out_with_spaces_two_line = r'''
@@ -294,19 +270,6 @@ extra_out_wrap_34 = r'''
                 ||     ||
 '''
 
-extra_in_empty_first_string =  ' 0123456789012345678901234567890123456789 '
-extra_out_empty_first_string = r'''
- _________________________________________
-/                                         \
-| 012345678901234567890123456789012345678 |
-\ 9                                       /
- -----------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-'''
 
 TESTS = {
     "Basics": [
@@ -353,18 +316,6 @@ TESTS = {
             "answer": edge_out_space_before
         },
         {
-            "input": edge_in_space_after,
-            "answer": edge_out_space_after
-        },
-        {
-           "input": edge_in_spaces_around,
-           "answer": edge_out_spaces_around
-        },
-        {
-           "input": edge_in_many_spaces_around,
-           "answer": edge_out_spaces_around
-        },
-         {
             "input": edge_in_onechar,
             "answer": edge_out_one_char,
         },
@@ -405,10 +356,6 @@ TESTS = {
         {
             "input": extra_in_wrap_34,
             "answer": extra_out_wrap_34
-        },
-        {
-            "input": extra_in_empty_first_string,
-            "output": extra_out_empty_first_string
         }
     ]
 }
