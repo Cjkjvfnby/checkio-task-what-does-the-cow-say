@@ -22,7 +22,7 @@ edge_out_one_char = r'''
                 ||     ||
 '''
 
-base_in_one_line =  'Checkio rulezz'
+base_in_one_line = 'Checkio rulezz'
 base_out_one_line = r'''
  ________________
 < Checkio rulezz >
@@ -46,7 +46,6 @@ base_out_long_without_spaces_full_line = r'''
                 ||     ||
 '''
 
-
 base_in_long_without_spaces_two_lines = 'looooooooooooooooooooooooooooooooooooong'
 base_out_long_without_spaces_two_lines = r'''
  _________________________________________
@@ -60,8 +59,7 @@ base_out_long_without_spaces_two_lines = r'''
                 ||     ||
 '''
 
-
-base_in_without_spaces_three_line ='loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong'
+base_in_without_spaces_three_line = 'loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong'
 base_out_without_spaces_three_line = r'''
  _________________________________________
 / loooooooooooooooooooooooooooooooooooooo \
@@ -75,7 +73,7 @@ base_out_without_spaces_three_line = r'''
                 ||     ||
 '''
 
-base_in_without_spaces_two_line_full ='looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong'
+base_in_without_spaces_two_line_full = 'looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong'
 base_out_without_spaces_two_line_full = r'''
  _________________________________________
 / loooooooooooooooooooooooooooooooooooooo \
@@ -180,7 +178,7 @@ extra_out_long_text = r'''
                 ||     ||
 '''
 
-extra_in_two_lines ='mooooooooooooooooooooooooooooooooooooooo mooo'
+extra_in_two_lines = 'mooooooooooooooooooooooooooooooooooooooo mooo'
 extra_out_two_lines = r'''
  _________________________________________
 / moooooooooooooooooooooooooooooooooooooo \
