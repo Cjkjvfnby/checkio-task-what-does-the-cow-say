@@ -406,7 +406,7 @@ TESTS = {
         },
         {
             "input": extra_in_empty_first_string,
-            "output": extra_out_empty_first_string
+            "answer": extra_out_empty_first_string
         }
     ]
 }
