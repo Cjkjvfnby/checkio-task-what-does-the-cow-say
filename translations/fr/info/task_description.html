@@ -1,0 +1,167 @@
+<style>
+    ul.rules li {
+        margin-left: 20px;
+    }
+</style>
+<p>
+    <i>Let cow say! - Les vaches parlent !</i><br/>
+</p>
+<p>
+    Votre vache est jeune et ne peut utiliser que le vocabulaire que vous lui avez appris.
+    Non seulement votre vache parle, mais elle présente ses paroles au fameux format Tux 
+    (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>) si on le lui demande gentiment.
+</p>
+
+<div>
+    Un texte vous est donné, et votre fonction doit mettre le discours de votre vache au format "cowsay" ("parole de vaches").
+    Décrivons les règles de cette mise en forme :
+    <ul class="rules">
+        <li>
+            La vache est toujours la même, seule sa citation change.
+        </li>
+        <li>
+            Des espaces multiples dans une ligne sont remplacés par un seul.
+        </li>
+        <li>
+            La bordure supérieure est constituée de caractères "_" (souligné - "underscore").
+            Elle commence avec un seul espace et se termine avant la colonne de bordure.
+        </li>
+        <li>
+            Chaque ligne de la citation est constituée des parties suivantes :
+            bordure de citation(1), espace(1), ligne(1-39), espace(1), bordure de citation(1).
+        </li>
+        <li>
+            Si le texte fait moins de 40 caractères, il tient dans une seule chaîne de caractères (string).
+            Cette chaîne est entourée par <strong>&lt;&gt;</strong>.
+        </li>
+        <li>
+            Si le texte fait  40 caractères ou plus, il faut le scinder selon les règles suivantes: 
+            <ul>
+                <li>
+                    La taille maximale d'un ligne est 39 caractères.
+                    Si la ligne trop longue contient un espace, la couper au niveau de l'espace le plus à droite.
+                    Cet espace sera alors ôté du texte.
+                    Sinon, prendre les 39 premiers caractères.
+                </li>
+                <li>
+                    Après le découpage, aligner toutes les lignes sur la gauche, 
+                    en rajoutant si besoin des espaces au bout des lignes
+                    trop courtes, de façon à ce que toutes les lignes fassent la même longueur.
+                    
+                <li>
+                <li>
+                    Bordures de la première ligne: <strong>/\</strong>
+                </li>
+                <li>
+                    Bordures des lignes du milieu: <strong>||</strong>
+                </li>
+                <li>
+                    Bordures de la dernière ligne: <strong>\/</strong></li>
+            </ul>
+        </li>
+        <li>
+            La bordure inférieure est constituée de signes moins "-". Elle a la même longueur que la bordure supérieure.
+        </li>
+        <li>
+            Le programme pour la console "cowsay" a un comportement étrange dans certains cas spéciaux, qui ne seront pas testés ici.
+        </li>
+    </ul>
+</div>
+
+<div>
+    <pre>
+     _________________________________
+    / Dog goes woof                   \
+    | Cat goes meow                   |
+    | Bird goes tweet                 |
+    | And mouse goes squeek           |
+    | Cow goes moo                    |
+    | Duck goes quack                 |
+    \ And the solution will go to you /
+     ---------------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    </pre>
+    <strong>What does the cow say? (Que dit la vache ?)</strong>
+</div>
+
+<br>
+<p>
+    <strong>Input:</strong> Un texte (string).
+</p>
+
+<p>
+    <strong>Output:</strong> Le résultat tel qu'il apparaît dans la console.
+</p>
+
+<p>
+    <strong>Conseil:</strong> Lire la documentation Python (<a href="http://docs.python.org/2/library/string.html">2.7</a>,
+    <a href="http://docs.python.org/3/library/stdtypes.html#string-methods">3.3</a>)
+    à propos des style de formatage (str.format and %).
+    Bien remarquer le <strong>r</strong> avant la chaîne de caractères. 
+    C'est un "raw string" et l'interprétation des séquences d'échappement est spécifique.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+    <pre class="brush: python">
+cowsay('Checkio rulezz') == r'''
+ ________________
+< Checkio rulezz >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+cowsay('A longtextwithonlyonespacetofittwolines.') == r'''
+ ________________________________________
+/ A                                      \
+\ longtextwithonlyonespacetofittwolines. /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+cowsay('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.') == r'''
+ _________________________________________
+/ Lorem ipsum dolor sit amet, consectetur \
+| adipisicing elit, sed do eiusmod tempor |
+| incididunt ut labore et dolore magna    |
+\ aliqua.                                 /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Application: </strong>
+    Les "Cowsays" d'origine sont écrits dans le langage de programmation Perl,
+    et sont donc facilement adaptables aux tâches système sous Unix.
+    Ils peuvent servir à avertir les utilisateurs que leur répertoire est plein,
+    qu'ils ont reçu un mail, etc...
+    Vous allez à présent pouvoir transmettre vos propres messages dans cette présentation (classique sous unix)!
+    Cette mission vous apprend à préparer et formater du texte pour une console d'affichage.
+</p>
+
+<p>
+    <strong>Préconditions:</strong>
+    0 &lt; len(text) &lt; 858;<br>
+    <strong>text</strong> ne contient pas uniquement des espaces;<br>
+    <strong>text</strong> ne contient que des lettres ASCII, des chiffres et caractères de ponctuation.
+</p>
