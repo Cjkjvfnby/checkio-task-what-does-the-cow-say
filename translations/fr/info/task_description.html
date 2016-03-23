@@ -7,47 +7,46 @@
     <i>Let cow say! - Les vaches parlent !</i><br/>
 </p>
 <p>
-Votre vache est jeune et ne peut utiliser que le vocabulaire que vous lui avez appris.
-Non seulement votre vache parle, mais elle présente ses paroles au fameux format Tux 
-
+    Votre vache est jeune et ne peut utiliser que le vocabulaire que vous lui avez appris.
+    Non seulement votre vache parle, mais elle présente ses paroles au fameux format Tux 
     (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>) si on le lui demande gentiment.
 </p>
 
 <div>
-Un texte vous est donné, et votre fonction doit mettre le discours de votre vache au format "cowsay" ("parole de vaches" ).
-Décrivons les règles de cette mise en forme :
-
+    Un texte vous est donné, et votre fonction doit mettre le discours de votre vache au format "cowsay" ("parole de vaches").
+    Décrivons les règles de cette mise en forme :
     <ul class="rules">
         <li>
-        La vache est toujours la même, seule sa citation change.
+            La vache est toujours la même, seule sa citation change.
         </li>
         <li>
-        Des espaces multiples dans une ligne sont remplacés par un seul.
+            Des espaces multiples dans une ligne sont remplacés par un seul.
         </li>
         <li>
-        La bordure supérieure est constituée de caractères "_" (souligné - "underscore").
-        Elle commence avec un seul espace et se termine avant la colonne de bordure.
+            La bordure supérieure est constituée de caractères "_" (souligné - "underscore").
+            Elle commence avec un seul espace et se termine avant la colonne de bordure.
         </li>
         <li>
-        Chaque ligne de la citation est constituée des parties suivantes :
-        bordure de citation(1), espace(1), ligne(1-39), espace(1), bordure de citation(1).
+            Chaque ligne de la citation est constituée des parties suivantes :
+            bordure de citation(1), espace(1), ligne(1-39), espace(1), bordure de citation(1).
         </li>
         <li>
-        Si le texte fait moins de 40 caractères, il tient dans une seule chaîne de caractères (string).
-        Cette chaîne est entourée par <strong>&lt;&gt;</strong>.
+            Si le texte fait moins de 40 caractères, il tient dans une seule chaîne de caractères (string).
+            Cette chaîne est entourée par <strong>&lt;&gt;</strong>.
         </li>
         <li>
-        Si le texte fait  40 caractères ou plus, il faut le scinder selon les règles suivantes: 
+            Si le texte fait  40 caractères ou plus, il faut le scinder selon les règles suivantes: 
             <ul>
                 <li>
-                La taille maximale d'un ligne est 39 caractères.
-                Si la ligne trop longue contient un espace, la couper au niveau de l'espace le plus à droite.
-                Cet espace sera alors ôté du texte.
-                Sinon, prendre les 39 premiers caractères.
+                    La taille maximale d'un ligne est 39 caractères.
+                    Si la ligne trop longue contient un espace, la couper au niveau de l'espace le plus à droite.
+                    Cet espace sera alors ôté du texte.
+                    Sinon, prendre les 39 premiers caractères.
                 </li>
                 <li>
-                Après le découpage, aligner toutes les lignes sur la gauche, en rajoutant si besoin des espaces au bout des lignes
-                trop courtes, de façon à ce que toutes les lignes fassent la même longueur.
+                    Après le découpage, aligner toutes les lignes sur la gauche, 
+                    en rajoutant si besoin des espaces au bout des lignes
+                    trop courtes, de façon à ce que toutes les lignes fassent la même longueur.
                     
                 <li>
                 <li>
@@ -61,10 +60,11 @@ Décrivons les règles de cette mise en forme :
             </ul>
         </li>
         <li>
-        La bordure inférieure est constituée de signes moins "-". Elle a la même longueur que la bordure supérieure.
+            La bordure inférieure est constituée de signes moins "-". Elle a la même longueur que la bordure supérieure.
         </li>
         <li>
-        Le programme pour la console "cowsay" a un comportement étrange dans certains cas spéciaux, qui ne seront pas testés ici.</li>
+            Le programme pour la console "cowsay" a un comportement étrange dans certains cas spéciaux, qui ne seront pas testés ici.
+        </li>
     </ul>
 </div>
 
@@ -90,11 +90,11 @@ Décrivons les règles de cette mise en forme :
 
 <br>
 <p>
-    <strong>Input: </strong> Un texte (string).
+    <strong>Input:</strong> Un texte (string).
 </p>
 
 <p>
-    <strong>Output: </strong> Le résultat tel qu'il apparaît dans la console.
+    <strong>Output:</strong> Le résultat tel qu'il apparaît dans la console.
 </p>
 
 <p>
